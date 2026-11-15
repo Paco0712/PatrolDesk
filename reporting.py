@@ -51,6 +51,7 @@ def _markdown(payload, template):
     ]
     context = {
         **payload["totals"],
+        "success_rate":payload["totals"]["success_rate_pct"],
         "site_name": payload["site_name"],
         "batch_id": payload["batch_id"],
         "period_start": payload["period_start"],
